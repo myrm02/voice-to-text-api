@@ -19,7 +19,7 @@ app.post('/', function (req, res) {
   })
   .then(function (response) {
     console.log(response);
-    res.send(response.data.data.translations.translatedText)
+    res.json(response.data.data.translations)
   })
   .catch(function (error) {
     console.log(error);
