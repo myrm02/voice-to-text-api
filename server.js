@@ -7,7 +7,7 @@ const app = express()
 app.use(cors());
 app.use(json());
 
-app.get('/', function (req, res) {
+app.post('/', function (req, res) {
   const query = req.body
 
   axios.post('https://deep-translate1.p.rapidapi.com/language/translate/v2', query, {
